@@ -27,7 +27,6 @@ router.afterEach((to, from) => {
   store.commit('setLoading', false)
 })
 
-
 /* eslint-disable no-new */
 
 new Vue({

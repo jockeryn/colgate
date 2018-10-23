@@ -7,10 +7,10 @@
       <vuestic-pre-loader v-show="isLoading" class="pre-loader"></vuestic-pre-loader>
       <router-view></router-view>
       <router-link style="margin-right:15px" v-if="$store.state.app.u_type=='Admin'" to="/admin/admin" class="btn btn-secondary btn-micro">
-         Admin 
-      </router-link> 
+         Admin
+      </router-link>
       <router-link v-if="$store.state.app.u_type=='Admin'" to="/admin/dashboard" class="btn btn-secondary btn-micro">
-         Mercaderista 
+         Mercaderista
       </router-link>
       <div class="clearfix"></div>
     </main>

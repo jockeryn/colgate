@@ -44,8 +44,8 @@
 </template>
 
 <script>
-  const axios = require('axios')
-  var CryptoJS = require("crypto-js")
+const axios = require('axios')
+var CryptoJS = require('crypto-js')
 export default {
   name: 'vuestic-modal',
   props: {
@@ -99,6 +99,9 @@ export default {
     },
     okAction: {
       type: Function
+    },
+    okParams: {
+      type: String
     }
   },
   data () {
@@ -144,7 +147,8 @@ export default {
       this.$emit('ok')
       this.show = false
       window.removeEventListener('keyup', this.listenKeyUp)
-      this.okAction()
+      this.okAction(this.okParams)
+      console.log(this.okParams)
     },
     cancel () {
       this.$emit('cancel')

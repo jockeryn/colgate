@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+  baseUrl: process.env.NODE_ENV === 'production' ? 'https://colgate.engedy.com/' : '/',
   lintOnSave: false,
   pages: {
     index: {
@@ -12,10 +13,10 @@ module.exports = {
       filename: 'index.html',
       // when using title option,
       // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
-      title: 'Colgate | Mercaderistas | Comalderos',
+      title: 'Colgate | Mercaderistas | Colmaderos',
       // chunks to include on this page, by default includes
       // extracted common chunks and vendor chunks.
-      //chunks: ['chunk-vendors', 'chunk-common', 'index'],
+      // chunks: ['chunk-vendors', 'chunk-common', 'index'],
     },
   },
   css: {
@@ -42,19 +43,16 @@ module.exports = {
         'vuex-store': path.resolve('src/store')
       }
     },
-    output: {
-      filename: 'js/build.js',
-    },
-     optimization: {
-       // to turn of code splitting:
-       // see: https://webpack.js.org/configuration/optimization/#optimization-splitchunks
-       splitChunks: false,
-     }
+    optimization: {
+      // to turn of code splitting:
+      // see: https://webpack.js.org/configuration/optimization/#optimization-splitchunks
+      splitChunks: false,
+    }
   },
   chainWebpack: config => {
-      config.optimization.delete('splitChunks')
-      config.optimization.splitChunks(false)
-    },
+    config.optimization.delete('splitChunks')
+    config.optimization.splitChunks(false)
+  },
   css: {
     loaderOptions: {
       // pass options to sass-loader

@@ -75,7 +75,7 @@
 export default {
   name: 'formColmadoShow',
   props: {
-    colmado:{
+    colmado: {
       type: Object,
     }
   }
