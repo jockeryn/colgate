@@ -43,7 +43,7 @@ export default {
 
   @media (max-width: 768px) {
     .form-group {
-      width: 80%;
+      width: 100%;
     }
   }
 

@@ -9,7 +9,7 @@
           <span>{{ $t('menu.dashboard') }}</span>
         </span>
       </sidebar-link>
-      <sidebar-link-group>
+      <!-- <sidebar-link-group>
         <span slot="title">
           <span
             class="sidebar-menu-item-icon vuestic-icon vuestic-icon-statistics"></span>
@@ -91,12 +91,7 @@
             <span>{{ $t('menu.colorPickers') }}</span>
           </span>
         </sidebar-link>
-        <!--<sidebar-link-->
-          <!--:to="{ name: 'dropdowns' }">-->
-          <!--<span slot="title">-->
-            <!--<span>{{ $t('menu.dropdowns') }}</span>-->
-          <!--</span>-->
-        <!--</sidebar-link>-->
+
         <sidebar-link
           :to="{ name: 'timelines' }">
           <span slot="title">
@@ -236,7 +231,7 @@
           <span slot="title">
             <span>{{ $t('404 Pages') }}</span>
           </span>
-        </sidebar-link>
+        </sidebar-link> -->
       </sidebar-link-group>
     </template>
   </vuestic-sidebar>

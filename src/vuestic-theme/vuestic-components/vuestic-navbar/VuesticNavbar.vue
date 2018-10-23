@@ -5,6 +5,7 @@
         <slot name="logo"/>
       </router-link>
     </div>
+    <!-- 
     <div class="row vuestic-navbar__content">
       <div class="header-elem-wrapper menu-icon-container justify-content-lg-start col">
         <slot name="selector"></slot>
@@ -12,7 +13,7 @@
       <div class="header-elem-wrapper navbar-text offset-md-1 col-md-7 d-none d-lg-flex">
         <slot name="center"></slot>
       </div>
-      <slot></slot>
+      <slot></slot> -->
     </div>
   </nav>
 </template>
@@ -47,7 +48,7 @@ export default {
     height: $top-nav-height;
     padding-left: $nav-padding-left;
     padding-right: $nav-padding-right;
-    background-color: $top-nav-bg;
+    background-color: $brand-primary;
 
     .vuestic-navbar__logo {
       display: flex;
@@ -62,9 +63,7 @@ export default {
       @include media-breakpoint-down(md) {
 
         .vuestic-navbar__logo {
-          width: $nav-mobile-brand-width;
-          top: $nav-mobile-brand-top;
-          left: $nav-mobile-brand-left;
+          width: 100%;
           height: auto;
           .navbar-brand {
             height: $font-size-smaller;
@@ -156,11 +155,14 @@ export default {
       padding: $nav-mobile-pt $nav-mobile-padding-h $nav-mobile-pb $nav-mobile-padding-h;
 
       .vuestic-navbar__logo {
-        width: $nav-mobile-brand-width;
-        top: $nav-mobile-brand-top;
-        left: $nav-mobile-brand-left;
+        width: 100%;
+        top: 0;
+        text-align:center;
+        position:inherit;
+        left: 0;
         height: auto;
         .navbar-brand {
+          margin: 0 auto;
           height: $font-size-smaller;
           padding: 0;
           font-size: $font-size-smaller;

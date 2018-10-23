@@ -1,13 +1,6 @@
 <template>
   <div class="data-visualisation-tab dashboard-tab">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="chart-container">
-          <vuestic-chart v-bind:data="donutChartData" type="donut"></vuestic-chart>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <vuestic-data-table
+    <vuestic-data-table
           :apiMode="apiMode"
           :tableData="tableData"
           :tableFields="tableFields"
@@ -16,7 +9,15 @@
           :sortFunctions="sortFunctions"
           :dataModeFilterableFields="dataModeFilterableFields"
         />
+    <div class="row">
+      <div class="col-md-12">
+        
       </div>
+      <!-- <div class="col-md-6">
+        <div class="chart-container">
+          <vuestic-chart v-bind:data="donutChartData" type="donut"></vuestic-chart>
+        </div>
+      </div> -->
     </div>
   </div>
 </template>

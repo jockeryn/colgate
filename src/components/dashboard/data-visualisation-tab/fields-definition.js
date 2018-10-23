@@ -13,6 +13,10 @@ export default {
     {
       name: 'salary',
       title: 'score'
+    },
+    {
+      name: 'actions',
+      title: 'actions'
     }
   ],
   sortFunctions: {

@@ -1,5 +1,5 @@
 <template>
-  <aside class="vuestic-sidebar">
+  <aside class="vuestic-sidebar sidebar-hidden">
     <vuestic-scrollbar>
       <ul class="sidebar-menu">
         <slot name="menu"></slot>

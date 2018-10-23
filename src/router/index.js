@@ -85,6 +85,11 @@ export default new Router({
           default: true,
         },
         {
+          name: 'admin',
+          path: 'admin',
+          component: lazyLoading('dashboard/Admin')
+        },
+        {
           name: 'statistics',
           path: 'statistics',
           component: EmptyParentComponent,

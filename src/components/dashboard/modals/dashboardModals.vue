@@ -63,19 +63,14 @@
 
 <script>
 export default {
-  name: 'dashboardModals',
+  name: 'modals',
 
   data () {
     return {
       show: true
     }
   },
-  props: {
-    comaldero: {
-      type: Object,
-      required: true
-    }
-  },
+
   methods: {
     showSmallModal () {
       this.$refs.smallModal.open()

@@ -11,10 +11,9 @@ import store from './store'
 import router from './router'
 import VuesticPlugin from '@/vuestic-theme/vuestic-plugin'
 import './i18n'
-import YmapPlugin from 'vue-yandex-maps'
+import Vuex from 'vuex'
 
 Vue.use(VuesticPlugin)
-Vue.use(YmapPlugin)
 
 // NOTE: workaround for VeeValidate + vuetable-2
 Vue.use(VeeValidate, { fieldsBagName: 'formFields' })
@@ -27,6 +26,7 @@ router.beforeEach((to, from, next) => {
 router.afterEach((to, from) => {
   store.commit('setLoading', false)
 })
+
 
 /* eslint-disable no-new */
 

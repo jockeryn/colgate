@@ -12,13 +12,19 @@ module.exports = {
       filename: 'index.html',
       // when using title option,
       // template title tag needs to be <title><%= htmlWebpackPlugin.options.title %></title>
-      title: 'Vuestic Admin',
+      title: 'Colgate | Mercaderistas | Comalderos',
       // chunks to include on this page, by default includes
       // extracted common chunks and vendor chunks.
-      chunks: ['chunk-vendors', 'chunk-common', 'index'],
+      //chunks: ['chunk-vendors', 'chunk-common', 'index'],
     },
   },
+  css: {
+    extract: {
+      filename: 'css/build.css',
+    }
+  },
   configureWebpack: {
+
     resolve: {
       alias: {
         'vue$': 'vue/dist/vue.esm.js',
@@ -36,7 +42,19 @@ module.exports = {
         'vuex-store': path.resolve('src/store')
       }
     },
+    output: {
+      filename: 'js/build.js',
+    },
+     optimization: {
+       // to turn of code splitting:
+       // see: https://webpack.js.org/configuration/optimization/#optimization-splitchunks
+       splitChunks: false,
+     }
   },
+  chainWebpack: config => {
+      config.optimization.delete('splitChunks')
+      config.optimization.splitChunks(false)
+    },
   css: {
     loaderOptions: {
       // pass options to sass-loader

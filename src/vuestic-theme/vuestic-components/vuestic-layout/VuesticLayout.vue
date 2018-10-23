@@ -7,6 +7,7 @@
     <div class="content-wrap" id="content-wrap">
       <slot name="content"></slot>
     </div>
+    <div style="clear:both"></div>
     <div class="made-by-footer">
       <slot name="footer"></slot>
     </div>
@@ -74,12 +75,10 @@ export default {
       }
     }
     .made-by-footer {
-      display: flex;
       justify-content: center;
+      text-align:center;
       align-items: center;
-      padding-top: 25px;
       padding-bottom: $made-by-footer-pb;
-      position: absolute;
       bottom: 0;
       height: calc(#{$layout-padding} + #{$widget-mb});
       width: 100%;

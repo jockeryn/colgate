@@ -1,7 +1,7 @@
 <template>
   <span>
-    <span class="c_name">{{rowData.colmado}}</span><br/>
-    <small>{{rowData.direccion}}</small>
+    <span class="c_name">{{rowData.Nombre}}</span><br/>
+    <small>{{rowData.Apellidos}}</small>
   </span>
 </template>
 

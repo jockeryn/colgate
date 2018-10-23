@@ -73,21 +73,21 @@ h4, .h4 {
 }
 
 .btn.btn-primary {
-  @include theme-button-variant($white, theme-color("primary"), $btn-border, $btn-box-shadow);
+  @include theme-button-variant($white, $vue-green, $btn-border, $btn-box-shadow);
 
   &.hover {
-    background-color: lighten(theme-color("primary"), 10%) !important;
+    background-color: lighten(theme-color("success"), 10%) !important;
     color: $white;
   }
 
   &.focus {
-    background-color: darken(theme-color("primary"), 15%);
+    background-color: darken(theme-color("success"), 15%);
     color: $white;
   }
 }
 
 .btn.btn-secondary {
-  @include theme-button-variant($white, theme-color("primary"), $btn-secondary-theme-border, none);
+  @include theme-button-variant($white, $vue-green, $btn-secondary-theme-border, none);
 
   color: theme-color("primary");
   border: $btn-secondary-theme-border;

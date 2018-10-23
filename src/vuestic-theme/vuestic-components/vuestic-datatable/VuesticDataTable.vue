@@ -1,7 +1,7 @@
 <template>
   <div class="vuestic-data-table table-responsive"
        :class="{'data-loading': loading}">
-    <div class="d-flex flex-md-row flex-column align-items-center" :class="controlsAlignmentClass">
+    <div class="d-flex flex-md-row flex-column align-items-right" :class="controlsAlignmentClass">
       <filter-bar
         @filter="onFilterSet"
         :label="filterInputLabel"
@@ -115,7 +115,7 @@ export default {
     },
     filterInputLabel: {
       type: String,
-      default: 'Search'
+      default: 'Buscar'
     },
     itemsPerPageLabel: {
       type: String,

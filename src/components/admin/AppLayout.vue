@@ -3,14 +3,21 @@
     <app-navbar :isOpen="opened" @toggle-menu="toggleSidebar"/>
     <app-sidebar :isOpen="opened" @toggle-menu="toggleSidebar"/>
     <main slot="content" id="content" class="content" role="main">
-      <app-breadcrumbs/>
+      <!-- <app-breadcrumbs/> -->
       <vuestic-pre-loader v-show="isLoading" class="pre-loader"></vuestic-pre-loader>
       <router-view></router-view>
+      <router-link style="margin-right:15px" v-if="$store.state.app.u_type=='Admin'" to="/admin/admin" class="btn btn-secondary btn-micro">
+         Admin 
+      </router-link> 
+      <router-link v-if="$store.state.app.u_type=='Admin'" to="/admin/dashboard" class="btn btn-secondary btn-micro">
+         Mercaderista 
+      </router-link>
+      <div class="clearfix"></div>
     </main>
-    <span slot="footer">©2018. Made by&nbsp;<a href="https://epicmax.co" target="_blank">Epicmax </a></span>
+
+    <span slot="footer">©2018. Made by&nbsp;<a href="https://socialandloyal.com" target="_blank">SocialAndLoyal </a></span>
   </vuestic-layout>
 </template>
-
 <script>
 
 import VuesticLayout from '../../vuestic-theme/vuestic-components/vuestic-layout/VuesticLayout'
